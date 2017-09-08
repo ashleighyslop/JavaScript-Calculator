@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <html lang="en-UK">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Ashleigh Hyslop">
+    <meta name="description" content="calculator made using classes in js">
+    <script type='text/javascript' src='function.js'>
+    </script>
+  </head>
+<body>
+<form name ="Calculator">
+  <table border="4">  <!--OUTER BORDER OF CALCULATOR, PANELS-->
+  <tr>   <!--TOP PANEL------>
+    <td colspan="2">JavaScript Calculator<br>
+      <input type="text" maxlength="40" size="30" name="Display" value = "">
+    </td>
+  </tr>  <!--END TOP PANEL--->
+  <tr>
+    <td> <!--LEFT PANEL------>
+      <table>
+       <tr>
+         <td><input type="button" value="1" onclick="addDigit('1')"></td>
+         <td><input type="button" value="2" onclick="addDigit('2')"> </td>
+         <td><input type="button" value="3" onclick="addDigit('3')"></td>
+       </tr>
+       <tr>
+         <td><input type="button" value="4" onclick="addDigit('4')"></td>
+         <td><input type="button" value="5" onclick="addDigit('5')"></td>
+         <td><input type="button" value="6" onclick="addDigit('6')"></td>
+       </tr>
+       <tr>
+         <td><input type="button" value="7" onclick="addDigit('7')"></td>
+         <td><input type="button" value="8" onclick="addDigit('8')"></td>
+         <td><input type="button" value="9" onclick="addDigit('9')"></td>
+       </tr>
+       <tr>
+         <td><input type="button" value="+/-" onclick="positiveNegative()"></td>
+         <td><input type="button" value="0" onclick="addDigit('0')"></td>
+         <td><input type="button" value="." onclick="decimal()"></td>
+       </tr>
+      </table>
+    </td><!--END LEFT PANEL-->
+    <td> <!--RIGHT PANEL----->
+      <table>
+        <tr>
+          <td><input type="button" value="+" onclick="operations('+')"></td>
+          <td><input type="button" value="-" onclick="operations('-')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="/" onclick="operations('/')"></td>
+          <td><input type="button" value="*" onclick="operations('*')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="=" onclick="execute(op)"></td>
+          <td><input type="button" value="AC"></td>
+        </tr>
+      </table>
+    </td><!--END RIGHT PANEL-->
+  </tr></table>
+</form>
+</body>
+</html>

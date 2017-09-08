@@ -1,8 +1,13 @@
+/* JS code using functions for a calulator. The variables memory, current and op represent the stored value, current value
+and a code for executing the +,-,*,/ operations.*/
+
+
+
 var memory = '0' //inital memory value
 var current = '0' //initial current value
 var op = 0 //records code for operations
 
-//adding digit to display
+//function for adding digit to display
 function addDigit(digit){
   if ( current ==0 && current.indexOf('.') ==-1){
     current = digit;
@@ -12,7 +17,7 @@ function addDigit(digit){
    document.Calculator.Display.value = current
 }
 
-//adding a decimal point
+//function for adding a decimal point
 function decimal(){
 
   if (current == 0){
@@ -24,7 +29,7 @@ function decimal(){
  document.Calculator.Display.value = current
 }
 
-//changing if positive or negative
+//function for changing if value positive or negative
 function positiveNegative(){
   if (current == 0){
     current = current
@@ -35,7 +40,9 @@ function positiveNegative(){
   document.Calculator.Display.value = current
 }
 
-//operations
+/*changing the caluclator display when the operation buttons are pressed.
+This will also change the memory and current values as required. 'op' is used as a key
+for later when the operations are required.*/
 function operations(val){
 
 if (current == 0){
@@ -69,8 +76,8 @@ else {
 
 }
 
-//excecuting
-
+//function to execute the required operations i.e. when the '=' button is pressed.
+//uses the value of 'op' to do this.
 function execute(op){
 
   if (op == 1){
@@ -93,7 +100,7 @@ function execute(op){
   document.Calculator.Display.value = current
 }
 
-//clear all
+//function to clear the current and memory values. returns '0' on calc dislpay
 function clearAll(){
   if (current ==0){
     current = current
